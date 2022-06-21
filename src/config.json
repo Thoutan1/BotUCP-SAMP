@@ -1,0 +1,13 @@
+{
+	"discord_token": "token",
+	"prefix": "!",
+	"owners": ["bot owner id akun elu"], 
+	"MYSQL_HOST": "localhost",
+	"MYSQL_USERNAME": "root",
+	"MYSQL_PASSWORD": "",
+	"MYSQL_DATABASE": "nama db",
+	"MemberRole": "role id buat di kasih pas habis register",
+	"AdminReportedBugs": "channel id buat pesan pesan habis player ngisi report bugs form modals",
+	"Server_Ip": "server ip",
+	"Server_Port": 7777
+}
