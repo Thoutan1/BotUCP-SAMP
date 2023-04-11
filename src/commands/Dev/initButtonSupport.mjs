@@ -43,6 +43,6 @@ export class UserCommand extends Command {
                     .setStyle("SUCCESS")
             )
 
-        message.channel.send({ embeds: [createEmbed("RANDOM", text).setTitle("Indolax Roleplay").setFooter({ text: "©Indolax Roleplay", iconURL: "https://cdn.discordapp.com/attachments/958674905845604392/988784499036938281/indolax_photos.jpg" })], components: [row] })
+        message.channel.send({ embeds: [createEmbed("RANDOM", text).setTitle("bapak kau Roleplay").setFooter({ text: "©bapak kau Roleplay", iconURL: "https://cdn.discordapp.com/attachments/958674905845604392/988784499036938281/bapak kau_photos.jpg" })], components: [row] })
 	}
 }

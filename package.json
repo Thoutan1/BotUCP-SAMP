@@ -4,7 +4,7 @@
   "main": "src/index.mjs",
   "module": "src/index.mjs",
   "type": "module",
-  "author": "@sapphire",
+  "author": "Thouthan1",
   "license": "UNLICENSE",
   "imports": {
     "#lib/*": "./src/lib/*.mjs",

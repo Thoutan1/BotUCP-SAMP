@@ -25,7 +25,7 @@ export class UserEvent extends Listener {
                     if (row.length < 1) {
                         const modal = new Modal()
                             .setCustomId("ModalRegister")
-                            .setTitle("Register Indolax Roleplay")
+                            .setTitle("Register bapak kau Roleplay")
 
                         const NickNameInput = new TextInputComponent()
                             .setCustomId('NickNameInput')
@@ -60,7 +60,7 @@ export class UserEvent extends Listener {
                 if(talkedRecently.has(interaction.user.id)) return interaction.reply({ content: `:x: You must wait 20 minute to report bug again`, ephemeral: true })
                 const modal = new Modal()
                         .setCustomId("ModalReportBug")
-                        .setTitle("Report bugs Indolax Roleplay")
+                        .setTitle("Report bugs bapak kau Roleplay")
 
                     const TitleInput = new TextInputComponent()
                         .setCustomId('Title')
@@ -110,7 +110,7 @@ export class UserEvent extends Listener {
                 
                 if(stringIsAValidUrl(link)) {
                     const channel = interaction.guild.channels.cache.find(ch => ch.id === config.AdminReportedBugs);
-                    channel.send({ embeds: [createEmbed("error", "").setTitle("Indolax Roleplay reported bugs").addField("Title", `> ${Title}`).addField("Description", `> ${desc}`).setAuthor({ name: "Indolax Support", iconURL: "https://cdn.discordapp.com/attachments/958674905845604392/988784499036938281/indolax_photos.jpg" }).setImage(link || "https://cdn.discordapp.com/attachments/956839460602015758/988805787893780500/No_image_icon___.png").setFooter({ text: `This bugs reported from discord user: ${interaction.user.tag}`, iconURL: interaction.user.displayAvatarURL({ format: "png", dynamic: true }) })] })
+                    channel.send({ embeds: [createEmbed("error", "").setTitle("bapak kau Roleplay reported bugs").addField("Title", `> ${Title}`).addField("Description", `> ${desc}`).setAuthor({ name: "bapak kau Support", iconURL: "https://cdn.discordapp.com/attachments/958674905845604392/988784499036938281/bapak kau_photos.jpg" }).setImage(link || "https://cdn.discordapp.com/attachments/956839460602015758/988805787893780500/No_image_icon___.png").setFooter({ text: `This bugs reported from discord user: ${interaction.user.tag}`, iconURL: interaction.user.displayAvatarURL({ format: "png", dynamic: true }) })] })
                     interaction.reply({ content: ":white_check_mark: Bugs has been successfully reported to admin!", ephemeral: true  })
                     talkedRecently.add(interaction.user.id);
                     setTimeout(() => {
@@ -155,7 +155,7 @@ async function SendDm(interaction, name, code) {
     await Connection.query(`INSERT INTO playerucp SET ucp = '${name}', DiscordID = '${interaction.user.id}', verifycode = '${code}'`);
     await member.roles.add(config.MemberRole);
     await member.setNickname(name);
-    await interaction.user.send({ embeds: [createEmbed("SUCCESS", `> **Hallo ${interaction.user.username}**\n> **Gunakanlah PIN Di bawah ini untuk login ke Game**`).addField("UCP", `> **${name}**`).addField("PIN", `> ||${code}||\n\n__Klik kotak hitam untuk melihat pin kamu!__`).setThumbnail("https://cdn.discordapp.com/attachments/958674905845604392/988784499036938281/indolax_photos.jpg").setTimestamp().setFooter({ text: "©Indolax Roleplay", iconURL: "https://cdn.discordapp.com/attachments/958674905845604392/988784499036938281/indolax_photos.jpg" })] });
+    await interaction.user.send({ embeds: [createEmbed("SUCCESS", `> **Hallo ${interaction.user.username}**\n> **Gunakanlah PIN Di bawah ini untuk login ke Game**`).addField("UCP", `> **${name}**`).addField("PIN", `> ||${code}||\n\n__Klik kotak hitam untuk melihat pin kamu!__`).setThumbnail("https://cdn.discordapp.com/attachments/958674905845604392/988784499036938281/bapak kau_photos.jpg").setTimestamp().setFooter({ text: "©bapak kau Roleplay", iconURL: "https://cdn.discordapp.com/attachments/958674905845604392/988784499036938281/bapak kau_photos.jpg" })] });
     await interaction.reply({ content: `:white_check_mark: UCP **${name}** Successfully Registered, please check your **Direct Message** for your verification code`, ephemeral: true })
 }
 
